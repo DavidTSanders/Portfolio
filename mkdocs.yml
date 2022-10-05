@@ -1,0 +1,11 @@
+site_name: David T Sanders
+
+theme:
+  name: "material"
+
+nav:
+  - Portfolio: index.md
+  - Bio: bio.md
+  - BikeCycle: bikecycle.md
+  - PittSubGraph: pittsubgraph.md
+  - AutoGIS: autogis.md

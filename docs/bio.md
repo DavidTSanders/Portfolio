@@ -1,8 +1,8 @@
 David Sanders is a life-long learner who is looking forward to starting this new phase of his life
-as a Data Analyst. He has a B.A. in Media Arts and is currently a self-guided student,
+as a Data Analyst. He has a B.A. in Media Arts and is currently a self-guided student, preparing for the Google Data Analytics
+Professional Certificate, and 
 completing his second online course in Graphical Information Science (GIS) with the University
-of Helsinki’s Department of Geosciences. He is also preparing for the Google Analytics
-Professional Certificate.
+of Helsinki’s Department of Geosciences.
 
 
 David’s most recent job was working with the Pittsburgh Compost Company where he was
@@ -33,4 +33,4 @@ court reporting and litigation firms in the United States.
 Library 
 
 
-In his free time, David enjoys bicycle riding, volunteering, and playing scrabble
+In his free time, David enjoys bicycle riding, volunteering, juggling and playing scrabble.

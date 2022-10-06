@@ -37,7 +37,7 @@ Below is an attempt to list and group some of my skills:
     │   
     └── more stuff     
 
-The [BikeCycle](BikeCycle.md) project is a showcase of these spreadsheet skills.
+The [BikeCycle](bikecycle.md) project is a showcase of these spreadsheet skills.
 
 
 ### Python

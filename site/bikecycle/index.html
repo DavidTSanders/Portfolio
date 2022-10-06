@@ -1,0 +1,764 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>BikeCycle - David T Sanders</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#purpose" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="David T Sanders" class="md-header__button md-logo" aria-label="David T Sanders" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            David T Sanders
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              BikeCycle
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="David T Sanders" class="md-nav__button md-logo" aria-label="David T Sanders" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    David T Sanders
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Portfolio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bio/" class="md-nav__link">
+        Bio
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          BikeCycle
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        BikeCycle
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freeride" class="md-nav__link">
+    FreeRide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-spreadsheets" class="md-nav__link">
+    Current Spreadsheets
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Spreadsheets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incoming-spreadsheet" class="md-nav__link">
+    Incoming spreadsheet:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-spreadsheet" class="md-nav__link">
+    Outgoing spreadsheet:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-spreadsheet" class="md-nav__link">
+    Proposed Spreadsheet
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposed Spreadsheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bikecycle-spreadsheet" class="md-nav__link">
+    BikeCycle spreadsheet:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-challenges" class="md-nav__link">
+    The Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    The Solution
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pittsubgraph/" class="md-nav__link">
+        PittSubGraph
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../autogis/" class="md-nav__link">
+        AutoGIS
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#purpose" class="md-nav__link">
+    Purpose
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freeride" class="md-nav__link">
+    FreeRide
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#current-spreadsheets" class="md-nav__link">
+    Current Spreadsheets
+  </a>
+  
+    <nav class="md-nav" aria-label="Current Spreadsheets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incoming-spreadsheet" class="md-nav__link">
+    Incoming spreadsheet:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outgoing-spreadsheet" class="md-nav__link">
+    Outgoing spreadsheet:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proposed-spreadsheet" class="md-nav__link">
+    Proposed Spreadsheet
+  </a>
+  
+    <nav class="md-nav" aria-label="Proposed Spreadsheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bikecycle-spreadsheet" class="md-nav__link">
+    BikeCycle spreadsheet:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-challenges" class="md-nav__link">
+    The Challenges
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-solution" class="md-nav__link">
+    The Solution
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>BikeCycle</h1>
+
+<h3 id="purpose">Purpose</h3>
+<p>BikeCycle is a Google Sheets based bicycle tracking system for FreeRide, a Do-It-Yourself bicycle cooperative located in Pittsburgh PA.</p>
+<p>BikeCycle's purpose is to track the lifecycle of a bicycle through FreeRide from the time a bicycle is first donated, to when it leaves the shop.</p>
+<h3 id="freeride">FreeRide</h3>
+<p>FreeRide accepts donated bicycles in any condition. Volunteers evaluate the bikes, fix them donate them, or take them apart for metal recycling. Once a bike is fixed, it's donated or sold to the public at a drastically reduced price.</p>
+<h2 id="current-spreadsheets">Current Spreadsheets</h2>
+<p>FreeRide currently uses two speadsheets to record bicycle information, an <strong>Incoming</strong> spreadsheet and an <strong>Outgoing</strong> spreadsheet. </p>
+<h3 id="incoming-spreadsheet">Incoming spreadsheet:</h3>
+<p>When a bike is donated to the shop a unique number known as a bikeID, is pasted to the frame. The bikeID and other basic information is entered into a form which automatically populates a spreadsheet named Incoming.  An abbreviated example of the Incoming spreadsheet is below:</p>
+<table>
+<thead>
+<tr>
+<th><em>Incoming</em></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Timestamp</strong></td>
+<td><strong>Make</strong></td>
+<td><strong>Model</strong></td>
+<td><strong>Wheel Size</strong></td>
+<td><strong>Bike ID</strong></td>
+</tr>
+<tr>
+<td>7/29/2022 10:12:14</td>
+<td>Kent</td>
+<td>Ambush</td>
+<td>20"</td>
+<td>A0001</td>
+</tr>
+<tr>
+<td>7/29/2022 10:12:54</td>
+<td>Huffy</td>
+<td>Stone Mountain</td>
+<td>20"</td>
+<td>A0002</td>
+</tr>
+<tr>
+<td>7/29/2022 10:13:32</td>
+<td>Next</td>
+<td>Screamer II</td>
+<td>20"</td>
+<td>A0003</td>
+</tr>
+</tbody>
+</table>
+<h3 id="outgoing-spreadsheet">Outgoing spreadsheet:</h3>
+<p>When a bicycle leaves the shop through a donation, sales, or recycling, the bikeId and destination are recorded using a form that populates a spreadsheet named Outgoing.</p>
+<table>
+<thead>
+<tr>
+<th><em>Outgoing</em></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bike ID</strong></td>
+<td><strong>Outgoing Destination</strong></td>
+</tr>
+<tr>
+<td>A0069</td>
+<td>Volunteer</td>
+</tr>
+<tr>
+<td>A0301</td>
+<td>Sold</td>
+</tr>
+<tr>
+<td>A0302</td>
+<td>Communicycle</td>
+</tr>
+</tbody>
+</table>
+<h2 id="proposed-spreadsheet">Proposed Spreadsheet</h2>
+<h3 id="bikecycle-spreadsheet">BikeCycle spreadsheet:</h3>
+<p>I was asked to take the two existing spreadsheets, Incoming and Outgoing, and create a third spreadsheet named BikeCycle. The BikeCycle spreadsheet links the Incoming spreadsheet to the Outgoing spreadsheet using the bikeID.</p>
+<table>
+<thead>
+<tr>
+<th><em>BikeCycle</em></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>bikeId</strong></td>
+<td><strong>Outgoing Destination</strong></td>
+<td><strong>Timestamp</strong></td>
+<td><strong>Make</strong></td>
+<td><strong>Model</strong></td>
+<td><strong>Wheel Size</strong></td>
+<td><strong>Bike number</strong></td>
+</tr>
+<tr>
+<td>A0069</td>
+<td>Volunteer</td>
+<td>7/29/2022 10:12:14</td>
+<td>Kent</td>
+<td>Ambush</td>
+<td>20"</td>
+<td>A0001</td>
+</tr>
+<tr>
+<td>A0069</td>
+<td>Volunteer</td>
+<td>7/29/2022 10:12:54</td>
+<td>Huffy</td>
+<td>Stone Mountain</td>
+<td>20"</td>
+<td>A0002</td>
+</tr>
+<tr>
+<td>A0069</td>
+<td>Volunteer</td>
+<td>7/29/2022 10:13:32</td>
+<td>Next</td>
+<td>Screamer II</td>
+<td>20"</td>
+<td>A0003</td>
+</tr>
+</tbody>
+</table>
+<h2 id="the-challenges">The Challenges</h2>
+<p>There were a few challenges to overcome to complete this project. </p>
+<ul>
+<li>The two original sheets are in seperate files. </li>
+<li>The lookup column in the Incoming spreadsheet, BikeId, is not the first column in the sheet. This presents challenges for the common spreadsheet formula VLOOKUP() which requires that the lookup field be to the left of any fields returned by the search. </li>
+</ul>
+<p>Note: There are other spreadsheet options that can be used, but this is a showcase of my VLOOKUP() skills. Other options include: </p>
+<ul>
+<li>INDEX() / MATCH()</li>
+<li>QUERY()</li>
+<li>XLOOKUP()</li>
+<li>Add-ons such as Consolidate Sheets or Merge Sheets </li>
+</ul>
+<h2 id="the-solution">The Solution</h2>
+<p>The solution to this challenge, using VLOOKUP(), is to use a combination of IMPORTRANGE() and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() is used to search for the corresponding Bicycle attributes in the Incoming spreadsheet using the BikeID as the lookup field.</p>
+<p>Let's take a look at how we got around  the VLOOKUP() limitation that requires the lookup field to be in the left most column. If you remember, the bikeId on the Incoming spreadsheet occurs well into the spreadsheet column list and definitely not to the left of the information we want VLOOKUP() to return.</p>
+<table>
+<thead>
+<tr>
+<th><em>Incoming</em></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Timestamp</strong></td>
+<td><strong>Make</strong></td>
+<td><strong>Model</strong></td>
+<td><strong>Wheel Size</strong></td>
+<td><strong>Bike ID</strong></td>
+</tr>
+<tr>
+<td>7/29/2022 10:12:14</td>
+<td>Kent</td>
+<td>Ambush</td>
+<td>20"</td>
+<td>A0001</td>
+</tr>
+</tbody>
+</table>
+<p>To avoid the limitations of VLOOKUP() we use the following formula to trick it into using the bikeId.</p>
+<p><code>ArrayFormula(IFERROR(VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False),""))</code></p>
+<p><em>Don't panic!</em><br />
+We're going to deconstruct this formula into it's individual parts and explain what each part is doing. First, let's highlight the VLOOKUP() part of this formula.</p>
+<p><code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>
+<p>Next we look at the VLOOKUP() syntax and compare it to the VLOOKUP() in our formula. The Microsoft documentation for Excel defines the syntax for VLOOKUP() as:</p>
+<p><code>VLOOKUP(lookup_value,table_array,col_index_num,[range_lookup])</code></p>
+<p>In the syntax above, the <em>lookup_value</em> is the search term we are trying to find. The <em>table_array</em> is where we expect to find this term and it's related values. The <em>col_index_num</em> is the column or columns we want to return. The <em>[range_lookup]</em> is optional and specifies, depending on who you ask, whether this is a text or numeric field (numeric is the default, choose False for text).</p>
+<p>The table below gives a description of this syntax and shows the values we entered for each part.</p>
+<table>
+<thead>
+<tr>
+<th>VLOOKUP()</th>
+<th>lookup_value</th>
+<th>table_array</th>
+<th>col_index_num</th>
+<th>[range_lookup]</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Description</td>
+<td>What to look for</td>
+<td>Where to look</td>
+<td>what to return</td>
+<td>optional options</td>
+</tr>
+<tr>
+<td>Our version</td>
+<td>A2</td>
+<td>{Incoming!H2,Incoming!A2:J}</td>
+<td>{2,3,4,5,6,7,9}</td>
+<td>False</td>
+</tr>
+</tbody>
+</table>
+<p>You can learn more about VLOOKUP() <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">here</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../bio/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Bio" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Bio
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../pittsubgraph/" class="md-footer__link md-footer__link--next" aria-label="Next: PittSubGraph" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              PittSubGraph
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+    
+  </body>
+</html>

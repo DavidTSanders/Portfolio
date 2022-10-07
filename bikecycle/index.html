@@ -321,7 +321,14 @@
     Solution formula
   </a>
   
-    <nav class="md-nav" aria-label="Solution formula">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deconstruction" class="md-nav__link">
+    Deconstruction
+  </a>
+  
+    <nav class="md-nav" aria-label="Deconstruction">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -332,8 +339,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deconstruction" class="md-nav__link">
-    Deconstruction
+  <a href="#importrange" class="md-nav__link">
+    IMPORTRANGE()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-formula" class="md-nav__link">
+    The formula
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayformula" class="md-nav__link">
+    ArrayFormula()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iferror" class="md-nav__link">
+    IFERROR()
   </a>
   
 </li>
@@ -358,22 +386,16 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-to-come" class="md-nav__link">
-    more to come...
-  </a>
-  
-    <nav class="md-nav" aria-label="more to come...">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-recap" class="md-nav__link">
-    To recap:
+  <a href="#and-there-you-have-it" class="md-nav__link">
+    And there you have it!
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
   
 </li>
         
@@ -525,7 +547,14 @@
     Solution formula
   </a>
   
-    <nav class="md-nav" aria-label="Solution formula">
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deconstruction" class="md-nav__link">
+    Deconstruction
+  </a>
+  
+    <nav class="md-nav" aria-label="Deconstruction">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -536,8 +565,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#deconstruction" class="md-nav__link">
-    Deconstruction
+  <a href="#importrange" class="md-nav__link">
+    IMPORTRANGE()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-formula" class="md-nav__link">
+    The formula
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arrayformula" class="md-nav__link">
+    ArrayFormula()
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iferror" class="md-nav__link">
+    IFERROR()
   </a>
   
 </li>
@@ -562,22 +612,16 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#more-to-come" class="md-nav__link">
-    more to come...
-  </a>
-  
-    <nav class="md-nav" aria-label="more to come...">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#to-recap" class="md-nav__link">
-    To recap:
+  <a href="#and-there-you-have-it" class="md-nav__link">
+    And there you have it!
   </a>
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
   
 </li>
         
@@ -683,7 +727,7 @@
 </table>
 <h2 id="proposed-spreadsheet">Proposed Spreadsheet</h2>
 <h3 id="bikecycle-spreadsheet">BikeCycle spreadsheet:</h3>
-<p>The goal is to take the two existing spreadsheets, Incoming and Outgoing, and combine them in a third spreadsheet named <strong>BikeCycle</strong>. The BikeCycle spreadsheet links the Incoming spreadsheet to the Outgoing spreadsheet using the bikeID. When a bike is leaving the shop, the bikeID is entered into the Outgoing form. Instead of reentering the information associated with that bike, will be automatically populated from the Incoming sheet. This will allow the user to easily see all the data for that bike in one place.</p>
+<p>The goal is to take the two existing spreadsheets, Incoming and Outgoing, and combine them into a third spreadsheet named <strong>BikeCycle</strong>. The BikeCycle spreadsheet links the Incoming spreadsheet to the Outgoing spreadsheet using the bikeID. When a bike is leaving the shop, the bikeID is entered into the Outgoing form. Instead of reentering all of the bike's information, it will be pulled automatically from the Incoming sheet. This will allow the user to see all the data for that bike in one place without having to do any extra work.</p>
 <table>
 <thead>
 <tr>
@@ -744,7 +788,7 @@
 <li>Add-ons such as Consolidate Sheets or Merge Sheets </li>
 </ul>
 <h2 id="the-solution">The Solution</h2>
-<p>The solution to this challenge, using VLOOKUP(), is to use a combination of IMPORTRANGE() and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() uses the bikeID to search the Incoming spreadsheet for the corresponding bicycle attributes.</p>
+<p>The solution to this challenge, using VLOOKUP(), is to use a combination of <strong>IMPORTRANGE()</strong> and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() uses the bikeID to search the Incoming spreadsheet for the corresponding bicycle attributes.</p>
 <p>Let's take a look at how we got around  the VLOOKUP() limitation that requires the lookup field to be in the left most column. If you remember, the bikeId on the Incoming spreadsheet occurs well into the spreadsheet column list and definitely not to the left of the information we want VLOOKUP() to return.</p>
 <table>
 <thead>
@@ -777,15 +821,24 @@
 <p>To avoid the limitations of VLOOKUP() we use the following formula to trick it into thinking the bikeId is in left most column. In place of a standard spreadsheet range <code>A1:J</code>, we use an array to rearrange the column order <code>{Incoming!H2,Incoming!A2:J}</code>. Note: In the actual Incoming spreadsheet, the bikeID is in column H.</p>
 <p>Here's the formula in it's entirety:<br />
 <code>ArrayFormula(IFERROR(VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False),""))</code></p>
+<h5 id="deconstruction">Deconstruction</h5>
 <h6 id="dont-panic">Don't panic!</h6>
 <p>We're going to deconstruct this formula into it's individual parts and explain what each part is doing. 
-If you're not familiar with VLOOKUP() you can learn more <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">here</a>.</p>
-<h6 id="deconstruction">Deconstruction</h6>
-<p>We use a combination of three predefined spreadsheet formulas ArrayFormula(), IFERROR(), and VLOOKUP() together to get the desired results. </p>
+If you're not familiar with VLOOKUP() you can learn more <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">here</a>.   </p>
+<h6 id="importrange">IMPORTRANGE()</h6>
+<p>Though we don't use IMPORTRANGE() directly in our formula, it does serve as part of our solution. We use IMPORTRANGE() to Import live copies of the Incoming and Outgoing spreadsheets into our Bikecycle spreadsheet. We put each into it's own tab. When either the Incoming or Outgoing spreadsheet is updated, it's live copy in our BikeCycle tab will be updated. Importing these spreadsheets into tabs inside BikeCycle will make them local, and allow our fomula to access them using the <code>!</code> notation (more on this later). It is possible to put IMPORTRANGE() directly into our formula, but that would make the formula very long and harder to read. You can learn more about IMPORTRANGE <a href="https://support.google.com/docs/answer/3093340?hl=en">here</a>.</p>
+<h6 id="the-formula">The formula</h6>
+<p><code>ArrayFormula(IFERROR(VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False),""))</code><br />
+We use a combination of three predefined spreadsheet formulas ArrayFormula(), IFERROR(), and VLOOKUP() together to get the desired results. </p>
+<h6 id="arrayformula">ArrayFormula()</h6>
+<p>ArrayFormula() is used to allow VLOOKUP() to return a result greater than one cell. In this case we are returning all the columns that have bike information. You can learn more about ARRAYFORMULA() <a href="https://support.google.com/docs/answer/3093275?hl=en">here</a>.</p>
+<h6 id="iferror">IFERROR()</h6>
+<p>IFERROR() replaces any error messages with a blank space. If there is a column with no data, an error message like N/A may put into the cell. IFERROR() replaces that error message with a message of your choice. In this case we put an empty string "". You can learn more about IFERROR() <a href="https://support.microsoft.com/en-us/office/iferror-function-c526fd07-caeb-47b8-8bb6-63f3e417f611">here</a>.</p>
 <h6 id="vlookup">VLOOKUP()</h6>
-<p>First, let's highlight the VLOOKUP() part of this formula. </p>
+<p>VLOOKUP() will take a lookup value from one cell in a spreadsheet and search the spreadsheet for the row containing that value. Once the row with the lookup value has been found, VLOOKUP() will return related data in a cell or cells in columns on that same row.</p>
+<p>First let's highlight the VLOOKUP() part of the solution formula. </p>
 <p><code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>
-<p>Next we look at the VLOOKUP() syntax and compare it to the VLOOKUP() in our formula. The Microsoft documentation for Excel defines the syntax for VLOOKUP() as:</p>
+<p>Next we'll look at the VLOOKUP() syntax and compare it to the VLOOKUP() in our formula. The <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">Microsoft documentation</a> for Excel defines the syntax for VLOOKUP() as:</p>
 <p><code>VLOOKUP(lookup_value,table_array,col_index_num,[range_lookup])</code></p>
 <p>In the syntax above, the <em>lookup_value</em> is the search term we are trying to find. The <em>table_array</em> is where we expect to find this term and it's related values. The <em>col_index_num</em> is the column or columns we want to return. The <em>[range_lookup]</em> is optional and specifies whether the lookup value should be an exact match (FALSE or 0) or approximate match (TRUE or 1 [ to work properly the columm must be sorted in ascending order]). </p>
 <p>The table below gives a description of this syntax and shows the values we entered for each part.</p>
@@ -817,18 +870,23 @@ If you're not familiar with VLOOKUP() you can learn more <a href="https://suppor
 </tbody>
 </table>
 <p><br></p>
-<p>So how does this particular call to VLOOKUP() get around the limitaion that requires the search match field to be in the left most column?</p>
+<p>So how does this particular call to VLOOKUP() get around the limitaion that requires the lookup field to be in the left most column? Answer: It uses an array.</p>
 <p>Let's examine at the values in the <em>table _array</em>, which is the range we give VLOOKUP() to use in it's search. </p>
 <p><code>VLOOKUP(A2,</code><strong><em><code>{Incoming!H2,Incoming!A2:J}</code></em></strong><code>,{2,3,4,5,6,7,9},False)</code>,""))```</p>
-<p>In our call to VLOOKUP(), in the <em>table_array</em> values are <code>{Incoming!H2,Incoming!A2:J}</code>. In a typical VLOOKUP() call, we would put a column and row range here. It would be something like <code>A1:J</code> to basically have VLOOKUP() search all the columns and rows in our sheet.</p>
-<p>Searching the whole range <code>A1:J</code> doesn't work for us because the BikeID, which is our lookup value, is not in the left most column. Instead we create our own defined range using an <strong>array</strong>, which starts and ends in curly braces {}.</p>
+<p>The <em>table_array</em> values are <code>{Incoming!H2,Incoming!A2:J}</code>. In a typical VLOOKUP() call, we would put a column and row range here. It would be something like <code>A1:J</code> to basically have VLOOKUP() search all the columns and rows in our sheet. Since the Incoming values are coming from a different spreadsheet tab within BikeCycle, we use the notation <code>Incoming!</code> to tell the formula to take this info from the Incoming tab.</p>
+<p>Searching the whole range <code>Incoming!A1:J</code> doesn't work for us because the BikeID, which is our lookup value, is not in the left most column. Instead we create our own defined range using an <strong>array</strong>, which starts and ends in curly braces {}.</p>
 <h5 id="our-array">Our Array</h5>
-<p>We use an array to mimic a speadsheet range. Inside our array, we can put the columns in any order we like.</p>
-<h3 id="more-to-come">more to come...</h3>
-<h5 id="to-recap">To recap:</h5>
-<p>The winning formula with the VLOOKUP() portion highlighted:<br />
-<code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>
+<p>We use an array to mimic a speadsheet range. Inside our array, between the curly braces, we can put the columns in any order we like. The order we choose is bikeID first then the rest of the spreadsheet. Since the bikeID is in column H, we put that first,  then a comma,  then the rest of the spreadsheet.  <code>{Incoming!H:2,Incoming!A2:J}</code>.</p>
+<h3 id="and-there-you-have-it">And there you have it!</h3>
+<p>The winning formula with the array highlighted:<br />
+<code>ArrayFormula(IFERROR(</code>VLOOKUP(A2,<strong><em><code>{Incoming!H2,Incoming!A2:J}</code></em></strong>,{2,3,4,5,6,7,9},False) <code>,""))</code> </p>
+<p>Now you know how to get past VLOOKUP()'s limitation. Use an array! </p>
+<h3 id="resources">Resources</h3>
 <p>You can learn more about VLOOKUP() <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">here</a></p>
+<p>You can learn more about ARRAYFORMULA() <a href="https://support.google.com/docs/answer/3093275?hl=en">here</a></p>
+<p>You can learn more about IFERROR() <a href="https://support.microsoft.com/en-us/office/iferror-function-c526fd07-caeb-47b8-8bb6-63f3e417f611">here</a></p>
+<p>You can learn more about IMPORTRANGE <a href="https://support.google.com/docs/answer/3093340?hl=en">here</a></p>
+<p>You can learn more about arrays <a href="https://exceljet.net/glossary/array#:~:text=All%20arrays%20in%20Excel%20are%20wrapped%20in%20curly,but%20one%20is%20horizontal%20and%20one%20is%20vertical%3A">here</a></p>
 
 
 

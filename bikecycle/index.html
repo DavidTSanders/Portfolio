@@ -358,9 +358,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#more-to-come" class="md-nav__link">
+    more to come...
+  </a>
+  
+    <nav class="md-nav" aria-label="more to come...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#to-recap" class="md-nav__link">
     To recap:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -549,9 +562,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#more-to-come" class="md-nav__link">
+    more to come...
+  </a>
+  
+    <nav class="md-nav" aria-label="more to come...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#to-recap" class="md-nav__link">
     To recap:
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -796,7 +822,8 @@
 <p>In our call to VLOOKUP(), in the <em>table_array</em> values are <code>{Incoming!H2,Incoming!A2:J}</code>. In a typical VLOOKUP() call, we would put a column and row range here. It would be something like <code>A1:J</code> to basically have VLOOKUP() search all the columns and rows in our sheet.</p>
 <p>Searching the whole range <code>A1:J</code> doesn't work for us because the BikeID, which is our lookup value, is not in the left most column. Instead we create our own defined range using an <strong>array</strong>, which starts and ends in curly braces {}.</p>
 <h5 id="our-array">Our Array</h5>
-<p>We use an array to mimic a speadsheet range. Inside the array, we can put the columns in any order we like.</p>
+<p>We use an array to mimic a speadsheet range. Inside our array, we can put the columns in any order we like.</p>
+<h3 id="more-to-come">more to come...</h3>
 <h5 id="to-recap">To recap:</h5>
 <p>The winning formula with the VLOOKUP() portion highlighted:<br />
 <code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>

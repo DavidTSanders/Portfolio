@@ -607,11 +607,11 @@
 <p>BikeCycle is a Google Sheets based bicycle tracking system for FreeRide, a Do-It-Yourself bicycle cooperative located in Pittsburgh PA.</p>
 <p>BikeCycle's purpose is to track the lifecycle of a bicycle through FreeRide from the time a bicycle is first donated, to when it leaves the shop.</p>
 <h3 id="freeride">FreeRide</h3>
-<p>FreeRide accepts donated bicycles in any condition. Volunteers evaluate the bikes, fix them, donate them, or take them apart for metal recycling. Once a bike is fixed, it's donated or sold to the public at a drastically reduced price.</p>
+<p>FreeRide accepts donated bicycles in any condition. Volunteers evaluate the bikes, fix them, donate them, or take them apart for recycling. Once a bike is fixed, it's donated or sold to the public at a drastically reduced price.</p>
 <h2 id="current-spreadsheets">Current Spreadsheets</h2>
 <p>FreeRide currently uses two speadsheets to record bicycle information, an <strong>Incoming</strong> spreadsheet and an <strong>Outgoing</strong> spreadsheet. </p>
 <h3 id="incoming-spreadsheet">Incoming spreadsheet:</h3>
-<p>When a bike is donated to the shop a unique number, known as the bikeID, is pasted to the frame. The bikeID and other basic information are entered into a form which automatically populates a spreadsheet named Incoming.  An abbreviated example of the Incoming spreadsheet is below:</p>
+<p>When a bike is donated to the shop a unique number, known as the <strong>bikeID</strong>, is pasted to the frame. The bikeID and other basic information are entered into a form which automatically populates a spreadsheet named Incoming.  An abbreviated example of the Incoming spreadsheet is below:</p>
 <table>
 <thead>
 <tr>
@@ -683,7 +683,7 @@
 </table>
 <h2 id="proposed-spreadsheet">Proposed Spreadsheet</h2>
 <h3 id="bikecycle-spreadsheet">BikeCycle spreadsheet:</h3>
-<p>I was asked to take the two existing spreadsheets, Incoming and Outgoing, and create a third spreadsheet named BikeCycle. The BikeCycle spreadsheet links the Incoming spreadsheet to the Outgoing spreadsheet using the bikeID. When a bike is leaving the shop and the bikeID is entered into the Outgoing form, the information associated with that bikeID, that was captured on the Incoming spreadsheet, will automatically show up in the new BikeCycle spreadsheet. This will allow the user to see all the data for that bike in one place.</p>
+<p>The goal is to take the two existing spreadsheets, Incoming and Outgoing, and combine them in a third spreadsheet named <strong>BikeCycle</strong>. The BikeCycle spreadsheet links the Incoming spreadsheet to the Outgoing spreadsheet using the bikeID. When a bike is leaving the shop, the bikeID is entered into the Outgoing form. Instead of reentering the information associated with that bike, will be automatically populated from the Incoming sheet. This will allow the user to easily see all the data for that bike in one place.</p>
 <table>
 <thead>
 <tr>
@@ -733,8 +733,8 @@
 <h2 id="the-challenges">The Challenges</h2>
 <p>There were a few challenges to overcome to complete this project. </p>
 <ul>
-<li>The two original sheets are in seperate files. </li>
-<li>The lookup column in the Incoming spreadsheet, BikeId, is not the first column in the sheet. This presents challenges for the common spreadsheet formula VLOOKUP() which requires the lookup field be to the left of any fields returned by the search. </li>
+<li>The two original sheets, Incoming and Outgoing, are in seperate files. </li>
+<li>The lookup column in the Incoming spreadsheet, BikeId, is not the first column in the sheet. This presents challenges for the common spreadsheet formula <strong>VLOOKUP()</strong> which <strong><em>requires the lookup field be to the left of any fields returned by the search</em></strong>. </li>
 </ul>
 <p>Note: There are other spreadsheet options that can be used, but this is a showcase of my VLOOKUP() skills. Other options include: </p>
 <ul>
@@ -744,7 +744,7 @@
 <li>Add-ons such as Consolidate Sheets or Merge Sheets </li>
 </ul>
 <h2 id="the-solution">The Solution</h2>
-<p>The solution to this challenge, using VLOOKUP(), is to use a combination of IMPORTRANGE() and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() uses the bikeID to search for the corresponding bicycle attributes in the Incoming spreadsheet.</p>
+<p>The solution to this challenge, using VLOOKUP(), is to use a combination of IMPORTRANGE() and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() uses the bikeID to search the Incoming spreadsheet for the corresponding bicycle attributes.</p>
 <p>Let's take a look at how we got around  the VLOOKUP() limitation that requires the lookup field to be in the left most column. If you remember, the bikeId on the Incoming spreadsheet occurs well into the spreadsheet column list and definitely not to the left of the information we want VLOOKUP() to return.</p>
 <table>
 <thead>
@@ -774,13 +774,14 @@
 </tbody>
 </table>
 <h5 id="solution-formula">Solution formula</h5>
-<p>To avoid the limitations of VLOOKUP() we use the following formula to trick it into using the bikeId which is not the left most column. In place of a standard spreadsheet range <code>A1:J</code>, we use an array to rearrange the column order <code>{Incoming!H2,Incoming!A2:J}</code>.</p>
+<p>To avoid the limitations of VLOOKUP() we use the following formula to trick it into thinking the bikeId is in left most column. In place of a standard spreadsheet range <code>A1:J</code>, we use an array to rearrange the column order <code>{Incoming!H2,Incoming!A2:J}</code>. Note: In the actual Incoming spreadsheet, the bikeID is in column H.</p>
 <p>Here's the formula in it's entirety:<br />
 <code>ArrayFormula(IFERROR(VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False),""))</code></p>
 <h6 id="dont-panic">Don't panic!</h6>
-<p>We're going to deconstruct this formula into it's individual parts and explain what each part is doing. </p>
+<p>We're going to deconstruct this formula into it's individual parts and explain what each part is doing. 
+If you're not familiar with VLOOKUP() you can learn more <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">here</a>.</p>
 <h6 id="deconstruction">Deconstruction</h6>
-<p>This combination of three predefined spreadsheet formulas uses ArrayFormula(), IFERROR(), and VLOOKUP() together to get the desired results. </p>
+<p>We use a combination of three predefined spreadsheet formulas ArrayFormula(), IFERROR(), and VLOOKUP() together to get the desired results. </p>
 <h6 id="vlookup">VLOOKUP()</h6>
 <p>First, let's highlight the VLOOKUP() part of this formula. </p>
 <p><code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>

@@ -313,6 +313,60 @@
     The Solution
   </a>
   
+    <nav class="md-nav" aria-label="The Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-formula" class="md-nav__link">
+    Solution formula
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dont-panic" class="md-nav__link">
+    Don't panic!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deconstruction" class="md-nav__link">
+    Deconstruction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlookup" class="md-nav__link">
+    VLOOKUP()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#our-array" class="md-nav__link">
+    Our Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-recap" class="md-nav__link">
+    To recap:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -449,6 +503,60 @@
   <a href="#the-solution" class="md-nav__link">
     The Solution
   </a>
+  
+    <nav class="md-nav" aria-label="The Solution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#solution-formula" class="md-nav__link">
+    Solution formula
+  </a>
+  
+    <nav class="md-nav" aria-label="Solution formula">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dont-panic" class="md-nav__link">
+    Don't panic!
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deconstruction" class="md-nav__link">
+    Deconstruction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlookup" class="md-nav__link">
+    VLOOKUP()
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#our-array" class="md-nav__link">
+    Our Array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#to-recap" class="md-nav__link">
+    To recap:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -600,7 +708,7 @@
 <p>There were a few challenges to overcome to complete this project. </p>
 <ul>
 <li>The two original sheets are in seperate files. </li>
-<li>The lookup column in the Incoming spreadsheet, BikeId, is not the first column in the sheet. This presents challenges for the common spreadsheet formula VLOOKUP() which requires that the lookup field be to the left of any fields returned by the search. </li>
+<li>The lookup column in the Incoming spreadsheet, BikeId, is not the first column in the sheet. This presents challenges for the common spreadsheet formula VLOOKUP() which requires the lookup field be to the left of any fields returned by the search. </li>
 </ul>
 <p>Note: There are other spreadsheet options that can be used, but this is a showcase of my VLOOKUP() skills. Other options include: </p>
 <ul>
@@ -610,7 +718,7 @@
 <li>Add-ons such as Consolidate Sheets or Merge Sheets </li>
 </ul>
 <h2 id="the-solution">The Solution</h2>
-<p>The solution to this challenge, using VLOOKUP(), is to use a combination of IMPORTRANGE() and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() is used to search for the corresponding Bicycle attributes in the Incoming spreadsheet using the BikeID as the lookup field.</p>
+<p>The solution to this challenge, using VLOOKUP(), is to use a combination of IMPORTRANGE() and VLOOKUP() in a new spreadsheet. IMPORTRANGE() is used to import the Outgoing data (Date, BikeId, Destination) to the BikeCycle spreadsheet. VLOOKUP() uses the bikeID to search for the corresponding bicycle attributes in the Incoming spreadsheet.</p>
 <p>Let's take a look at how we got around  the VLOOKUP() limitation that requires the lookup field to be in the left most column. If you remember, the bikeId on the Incoming spreadsheet occurs well into the spreadsheet column list and definitely not to the left of the information we want VLOOKUP() to return.</p>
 <table>
 <thead>
@@ -639,14 +747,20 @@
 </tr>
 </tbody>
 </table>
-<p>To avoid the limitations of VLOOKUP() we use the following formula to trick it into using the bikeId.</p>
-<p><code>ArrayFormula(IFERROR(VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False),""))</code></p>
-<p><em>Don't panic!</em><br />
-We're going to deconstruct this formula into it's individual parts and explain what each part is doing. First, let's highlight the VLOOKUP() part of this formula.</p>
+<h5 id="solution-formula">Solution formula</h5>
+<p>To avoid the limitations of VLOOKUP() we use the following formula to trick it into using the bikeId which is not the left most column. In place of a standard spreadsheet range <code>A1:J</code>, we use an array to rearrange the column order <code>{Incoming!H2,Incoming!A2:J}</code>.</p>
+<p>Here's the formula in it's entirety:<br />
+<code>ArrayFormula(IFERROR(VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False),""))</code></p>
+<h6 id="dont-panic">Don't panic!</h6>
+<p>We're going to deconstruct this formula into it's individual parts and explain what each part is doing. </p>
+<h6 id="deconstruction">Deconstruction</h6>
+<p>This combination of three predefined spreadsheet formulas uses ArrayFormula(), IFERROR(), and VLOOKUP() together to get the desired results. </p>
+<h6 id="vlookup">VLOOKUP()</h6>
+<p>First, let's highlight the VLOOKUP() part of this formula. </p>
 <p><code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>
 <p>Next we look at the VLOOKUP() syntax and compare it to the VLOOKUP() in our formula. The Microsoft documentation for Excel defines the syntax for VLOOKUP() as:</p>
 <p><code>VLOOKUP(lookup_value,table_array,col_index_num,[range_lookup])</code></p>
-<p>In the syntax above, the <em>lookup_value</em> is the search term we are trying to find. The <em>table_array</em> is where we expect to find this term and it's related values. The <em>col_index_num</em> is the column or columns we want to return. The <em>[range_lookup]</em> is optional and specifies, depending on who you ask, whether this is a text or numeric field (numeric is the default, choose False for text).</p>
+<p>In the syntax above, the <em>lookup_value</em> is the search term we are trying to find. The <em>table_array</em> is where we expect to find this term and it's related values. The <em>col_index_num</em> is the column or columns we want to return. The <em>[range_lookup]</em> is optional and specifies whether the lookup value should be an exact match (FALSE or 0) or approximate match (TRUE or 1 [ to work properly the columm must be sorted in ascending order]). </p>
 <p>The table below gives a description of this syntax and shows the values we entered for each part.</p>
 <table>
 <thead>
@@ -661,10 +775,10 @@ We're going to deconstruct this formula into it's individual parts and explain w
 <tbody>
 <tr>
 <td>Description</td>
-<td>What to look for</td>
-<td>Where to look</td>
-<td>what to return</td>
-<td>optional options</td>
+<td>search value</td>
+<td>range to search</td>
+<td>which columns to return</td>
+<td>FALSE = approx match, TRUE = exact match</td>
 </tr>
 <tr>
 <td>Our version</td>
@@ -675,7 +789,17 @@ We're going to deconstruct this formula into it's individual parts and explain w
 </tr>
 </tbody>
 </table>
-<p>More to come....</p>
+<p><br></p>
+<p>So how does this particular call to VLOOKUP() get around the limitaion that requires the search match field to be in the left most column?</p>
+<p>Let's examine at the values in the <em>table _array</em>, which is the range we give VLOOKUP() to use in it's search. </p>
+<p><code>VLOOKUP(A2,</code><strong><em><code>{Incoming!H2,Incoming!A2:J}</code></em></strong><code>,{2,3,4,5,6,7,9},False)</code>,""))```</p>
+<p>In our call to VLOOKUP(), in the <em>table_array</em> values are <code>{Incoming!H2,Incoming!A2:J}</code>. In a typical VLOOKUP() call, we would put a column and row range here. It would be something like <code>A1:J</code> to basically have VLOOKUP() search all the columns and rows in our sheet.</p>
+<p>Searching the whole range <code>A1:J</code> doesn't work for us because the BikeID, which is our lookup value, is not in the left most column. Instead we create our own defined range using an <strong>array</strong>, which starts and ends in curly braces {}.</p>
+<h5 id="our-array">Our Array</h5>
+<p>We use an array to mimic a speadsheet range. Inside the array, we can put the columns in any order we like.</p>
+<h5 id="to-recap">To recap:</h5>
+<p>The winning formula with the VLOOKUP() portion highlighted:<br />
+<code>ArrayFormula(IFERROR(</code> <strong><em><code>VLOOKUP(A2,{Incoming!H2,Incoming!A2:J},{2,3,4,5,6,7,9},False)</code></em></strong> <code>,""))</code></p>
 <p>You can learn more about VLOOKUP() <a href="https://support.microsoft.com/en-us/office/quick-reference-card-vlookup-refresher-750fe2ed-a872-436f-92aa-36c17e53f2ee">here</a></p>
 
 
